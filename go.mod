@@ -1,4 +1,4 @@
-module numkem/echo-logrusmiddleware
+module github.com/numkem/echo-logrusmiddleware
 
 go 1.13
 
