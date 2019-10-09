@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 	"github.com/labstack/gommon/log"
 	"github.com/sirupsen/logrus"
 )
@@ -64,6 +64,9 @@ func (l Logger) Output() io.Writer {
 func (l Logger) SetOutput(w io.Writer) {
 	logrus.SetOutput(w)
 }
+
+// Because we use the standard formatter, stub this function
+func (l Logger) SetHeader(h string) {}
 
 func (l Logger) Printj(j log.JSON) {
 	logrus.WithFields(logrus.Fields(j)).Print()
